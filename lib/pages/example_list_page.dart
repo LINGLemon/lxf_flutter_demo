@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:lxf_flutter_demo/models/func_model.dart';
 import 'package:lxf_flutter_demo/widgets/common_widgets.dart';
 
@@ -39,19 +40,19 @@ class ExampleFuncListPageState extends State<ExampleFuncListPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        appBar: AppBar(
-          title: const Text("功能列表"),
-          backgroundColor: Colors.blueAccent, //设置appbar背景颜色
-          centerTitle: true, //设置标题是否局中
+    return CupertinoApp(
+      home: CupertinoPageScaffold(
+        navigationBar: const CupertinoNavigationBar(
+          middle: Text('样例'),
+          backgroundColor: Colors.blueAccent,
         ),
-        body: ListView.builder(
-          itemCount: _funcLists.length,
-          itemBuilder: (BuildContext context, int index) {
-            return _functionWidget(context, index);
-          },
+        child: Scaffold(
+          body: ListView.builder(
+            itemCount: _funcLists.length,
+            itemBuilder: (BuildContext context, int index) {
+              return _functionWidget(context, index);
+            },
+          ),
         ),
       ),
     );
