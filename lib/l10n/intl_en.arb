@@ -1,0 +1,6 @@
+{
+  "hello": "hello",
+  "confirm": "confirm",
+  "cancel": "cancel",
+  "readBook": "read {bookName}"
+}
