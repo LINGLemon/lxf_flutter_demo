@@ -39,14 +39,12 @@ class TextExamplePageState extends State<TextExamplePage> {
           TextButton(
             child: const Text('中文'),
             onPressed: () {
-              print('中文');
               context.read<LanguageBloc>().add(ChangeLanguageToZh());
             },
           ),
           TextButton(
             child: const Text('英文'),
             onPressed: () {
-              print('英文');
               context.read<LanguageBloc>().add(ChangeLanguageToEn());
             },
           ),
