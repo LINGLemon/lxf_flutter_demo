@@ -59,7 +59,7 @@ class ExampleListPageState extends State<ExampleListPage> {
       ),
       FuncModel(
         name: "Gesture",
-        desc: "点击、按钮、手势演示",
+        desc: "点击、按钮、手势事件演示",
         onPressed: () {
           Navigator.push(
             context,

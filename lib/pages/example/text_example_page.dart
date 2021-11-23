@@ -31,7 +31,7 @@ class TextExamplePageState extends State<TextExamplePage> {
             Navigator.of(context).pop();
           },
         ),
-        middle: const Text('Text'),
+        middle: const Text('文本演示'),
         backgroundColor: Colors.blueAccent,
       ),
       child: Column(
