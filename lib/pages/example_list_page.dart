@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:lxf_flutter_demo/models/func_model.dart';
 import 'package:lxf_flutter_demo/widgets/common_widgets.dart';
 
-import 'example/gesture_example_page.dart';
+import 'example/event_example_page.dart';
 import 'example/image_example_page.dart';
 import 'example/text_example_page.dart';
 import 'example/layout_example_page.dart';
@@ -58,13 +58,13 @@ class ExampleListPageState extends State<ExampleListPage> {
         },
       ),
       FuncModel(
-        name: "Gesture",
-        desc: "点击、按钮、手势事件演示",
+        name: "Event",
+        desc: "点击、按钮、手势、弹窗、toast事件演示",
         onPressed: () {
           Navigator.push(
             context,
             CupertinoPageRoute(builder: (context) {
-              return const GestureExamplePage();
+              return const EventExamplePage();
             }),
           );
         },
