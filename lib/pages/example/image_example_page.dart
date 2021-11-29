@@ -33,8 +33,7 @@ class ImageExamplePageState extends State<ImageExamplePage> {
         middle: const Text('图片演示'),
         backgroundColor: Colors.blueAccent,
       ),
-      child:
-      ListView(
+      child: ListView(
         children: [
           const Text(
             '这是加载网络图片的轮播器',
@@ -59,7 +58,7 @@ class ImageExamplePageState extends State<ImageExamplePage> {
                 return CachedNetworkImage(
                   imageUrl: imgUrl,
                   progressIndicatorBuilder: (context, url, downloadProgress) =>
-                      CircularProgressIndicator(value: downloadProgress.progress),
+                      const CupertinoActivityIndicator(),
                   errorWidget: (context, url, error) => const Icon(Icons.error),
                 );
               },
@@ -77,7 +76,8 @@ class ImageExamplePageState extends State<ImageExamplePage> {
               decoration: TextDecoration.none,
             ),
           ),
-          Image.asset('assets/images/img_profile_01_nol.png', width: 64, height: 64),
+          Image.asset('assets/images/img_profile_01_nol.png',
+              width: 64, height: 64),
           const Text(
             '这是网络加载的图片',
             style: TextStyle(
