@@ -89,8 +89,7 @@ class ImageExamplePageState extends State<ImageExamplePage> {
           ),
           CachedNetworkImage(
             imageUrl: "http://iaelemon.cn/m/img/online.png",
-            progressIndicatorBuilder: (context, url, downloadProgress) =>
-                CircularProgressIndicator(value: downloadProgress.progress),
+            placeholder: (context, url) => Image.asset('assets/images/img_profile_02_nol.png'),
             errorWidget: (context, url, error) => const Icon(Icons.error),
           ),
         ],

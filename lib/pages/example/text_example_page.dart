@@ -51,6 +51,7 @@ class TextExamplePageState extends State<TextExamplePage> {
           Text(
             S.of(context).hello,
             style: const TextStyle(
+              fontFamily: 'PingFang SC',
               color: Colors.black,
               fontSize: 16,
               fontWeight: FontWeight.normal,
