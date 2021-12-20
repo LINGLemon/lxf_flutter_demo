@@ -174,7 +174,8 @@ class EventExamplePageState extends State<EventExamplePage> {
                           //打开新的Widget 的时间
                           transitionDuration: Duration(milliseconds: 1000),
                           //关闭新的Widget 的时间
-                          reverseTransitionDuration: Duration(milliseconds: 1000),
+                          reverseTransitionDuration:
+                              Duration(milliseconds: 1000),
                         ),
                         builder: (BuildContext context) {
                           //显示的Widget
@@ -193,12 +194,60 @@ class EventExamplePageState extends State<EventExamplePage> {
                                   Navigator.of(context).pop();
                                 },
                                 child: Center(
-                                  child: Image.asset("assets/images/img_profile_02_nol.png"),
+                                  child: Image.asset(
+                                      "assets/images/img_profile_02_nol.png"),
                                 ),
                               ),
                             ),
                           );
                         },
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 80,
+              child: Row(
+                children: [
+                  CupertinoButton(
+                    child: Row(
+                      children: const [
+                        // Icon(Icons.radio_button_checked),
+                        // Padding(padding: EdgeInsets.all(5)),
+                        Text("toast弹窗"),
+                      ],
+                    ),
+                    color: Colors.blueAccent,
+                    padding: const EdgeInsets.all(10),
+                    disabledColor: Colors.grey,
+                    onPressed: () {
+                      Fluttertoast.showToast(
+                        msg: "这是一个toast",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.CENTER,
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 80,
+              child: Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(
+                      Icons.favorite,
+                      color: Colors.red,
+                      size: 24,
+                    ),
+                    onPressed: () {
+                      Fluttertoast.showToast(
+                        msg: "这是一个IconButton",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.CENTER,
                       );
                     },
                   ),

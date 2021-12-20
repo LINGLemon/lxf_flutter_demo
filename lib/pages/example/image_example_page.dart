@@ -53,7 +53,7 @@ class ImageExamplePageState extends State<ImageExamplePage> {
                 int i = index + 1;
                 String imgUrl = "http://iaelemon.cn/m/img/banner$i.png";
                 if (index == 0) {
-                  imgUrl = "http://iaelemon.cn/m/img/banner.png";
+                  imgUrl = "http://iaelemon.cn/m/img/banner3.png";
                 }
                 return CachedNetworkImage(
                   imageUrl: imgUrl,
@@ -79,6 +79,20 @@ class ImageExamplePageState extends State<ImageExamplePage> {
           Image.asset('assets/images/img_profile_01_nol.png',
               width: 64, height: 64),
           const Text(
+            '这是Icon',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 16,
+              fontWeight: FontWeight.normal,
+              decoration: TextDecoration.none,
+            ),
+          ),
+          const Icon(
+            Icons.favorite,
+            color: Colors.red,
+            size: 24,
+          ),
+          const Text(
             '这是网络加载的图片',
             style: TextStyle(
               color: Colors.black,
@@ -89,7 +103,8 @@ class ImageExamplePageState extends State<ImageExamplePage> {
           ),
           CachedNetworkImage(
             imageUrl: "http://iaelemon.cn/m/img/online.png",
-            placeholder: (context, url) => Image.asset('assets/images/img_profile_02_nol.png'),
+            placeholder: (context, url) =>
+                Image.asset('assets/images/img_profile_02_nol.png'),
             errorWidget: (context, url, error) => const Icon(Icons.error),
           ),
         ],
