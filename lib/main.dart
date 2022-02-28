@@ -8,22 +8,7 @@ import 'bloc/language_bloc.dart';
 import 'generated/l10n.dart';
 
 void main() {
-  Bloc.observer = AppBlocObserver();
   runApp(const App());
-}
-
-class AppBlocObserver extends BlocObserver {
-  @override
-  void onChange(BlocBase bloc, Change change) {
-    super.onChange(bloc, change);
-    if (bloc is Cubit) print(change);
-  }
-
-  @override
-  void onTransition(Bloc bloc, Transition transition) {
-    super.onTransition(bloc, transition);
-    print(transition);
-  }
 }
 
 class App extends StatelessWidget {
